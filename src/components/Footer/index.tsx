@@ -24,7 +24,7 @@ const Footer = () => {
           <ImLinkedin />
         </a>
         <a
-          href="mailto=d.a.s2000silva14@gmail.com"
+          href="mailto:d.a.s2000silva14@gmail.com"
           target="_blank"
           rel="noreferrer"
         >

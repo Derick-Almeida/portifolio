@@ -26,12 +26,8 @@ export default createGlobalStyle`
         display: none;
     }
     body {
-        overflow: hidden;
         background: var(--grey-3);
 
-        @media (max-width: 425px) {
-            overflow: auto;
-        }
     }
     button{
         cursor: pointer;
