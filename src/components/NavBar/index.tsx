@@ -1,6 +1,12 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Header } from "./style";
 
-const NavBar = () => {
+interface NavBarProps {
+  active: string;
+  setActive: (e: string) => void;
+}
+
+const NavBar = ({ active, setActive }: NavBarProps) => {
   return (
     <Header>
       <h1>Dérick Almeida</h1>
@@ -8,18 +14,31 @@ const NavBar = () => {
       <nav>
         <ul>
           <li>
-            <a href="#" className="active">
+            <a
+              href="#"
+              className={active === "#" ? "active" : ""}
+              onClick={() => setActive("#")}
+            >
               Home
             </a>
           </li>
           <li>
-            <a href="#projects">Projetos</a>
+            <a
+              href="#projects"
+              className={active === "#projects" ? "active" : ""}
+              onClick={() => setActive("#projects")}
+            >
+              Projetos
+            </a>
           </li>
           <li>
-            <a href="#skills">Habilidades</a>
-          </li>
-          <li>
-            <a href="#contacts">Contatos</a>
+            <a
+              href="#skills"
+              className={active === "#skills" ? "active" : ""}
+              onClick={() => setActive("#skills")}
+            >
+              Habilidades
+            </a>
           </li>
         </ul>
       </nav>

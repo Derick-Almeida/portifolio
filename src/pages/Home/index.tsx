@@ -1,12 +1,21 @@
+import { useState } from "react";
+
 import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
+
+import { BsGithub } from "react-icons/bs";
+
+import Projects from "./Projects";
+import Skills from "./Skills";
 
 import { Container } from "./style";
 
 const Home = () => {
+  const [active, setActive] = useState("#");
+
   return (
     <>
-      <NavBar />
+      <NavBar active={active} setActive={setActive} />
       <Container>
         <section id="home" className="home">
           <div className="content">
@@ -18,10 +27,24 @@ const Home = () => {
               Descubra aqui neste ambiente, criado especialmente para você,
               todos os meus projetos e tecnologias
             </p>
+            <div className="buttons">
+              <a href="#projects" onClick={() => setActive("#projects")}>
+                Ver projetos
+              </a>
+              <a
+                href="https://github.com/Derick-Almeida"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <BsGithub /> GitHub
+              </a>
+            </div>
           </div>
           <div className="parallax--thumb"></div>
         </section>
-        <section id="projects"></section>
+
+        <Projects />
+        <Skills />
       </Container>
       <Footer />
     </>

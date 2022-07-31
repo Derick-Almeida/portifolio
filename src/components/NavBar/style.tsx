@@ -13,7 +13,7 @@ export const Header = styled.header`
 
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
 
   h1 {
     color: var(--white);
@@ -48,5 +48,18 @@ export const Header = styled.header`
     font-weight: 700;
     color: var(--white);
     border-bottom: 2px solid var(--white);
+  }
+
+  @media (max-width: 425px) {
+    padding: 0 5%;
+    justify-content: center;
+
+    h1 {
+      white-space: nowrap;
+    }
+
+    nav {
+      display: none;
+    }
   }
 `;

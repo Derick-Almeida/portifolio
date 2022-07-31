@@ -12,19 +12,26 @@ export default createGlobalStyle`
         --black: #000000;
         --purple-0: #623CEA;
         --purple-1: #46009b;
-        --purple-2: #420d76;
+        --purple-2: #420D76;
         --purple-3: #280054;
-        --grey-0: #;
-        --grey-1: #;
-        --grey-2: #8f8f8f;
+        --grey-1: #BDBDBD;
+        --grey-2: #8F8F8F;
         --grey-3:#222222;
         --font-IBM: 'IBM Plex Sans', sans-serif;
     }
     html{
         scroll-behavior: smooth;
     }
+    html::-webkit-scrollbar{
+        display: none;
+    }
     body {
+        overflow: hidden;
         background: var(--grey-3);
+
+        @media (max-width: 425px) {
+            overflow: auto;
+        }
     }
     button{
         cursor: pointer;
