@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Infos from "../../pages/Home/Projects/Infos";
 
@@ -28,6 +28,14 @@ const Card = ({ projectData }: ProjectDataProps) => {
   const { name, image, active } = projectData;
 
   const [moreInfos, setMoreInfos] = useState(false);
+
+  useEffect(() => {
+    if (moreInfos) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [moreInfos]);
 
   return (
     <>
