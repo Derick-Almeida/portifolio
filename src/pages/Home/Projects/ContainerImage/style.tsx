@@ -16,20 +16,24 @@ export const Container = styled.div`
 
   .previews {
     height: 24%;
+    max-width: 100%;
+
     display: flex;
     gap: 8px;
+    justify-content: space-evenly;
 
     padding: 3% 0;
     background: var(--black);
-    overflow-x: auto;
+    overflow: hidden;
+  }
 
-    &::-webkit-scrollbar {
-      height: 15px;
-    }
+  @media (max-width: 425px) {
+    width: 100%;
 
-    &::-webkit-scrollbar-thumb {
-      background: var(--purple-2);
-      border-radius: 50px;
+    .previews {
+      gap: 0;
+
+      padding: 1% 0;
     }
   }
 `;

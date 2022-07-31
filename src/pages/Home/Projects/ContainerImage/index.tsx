@@ -11,10 +11,7 @@ interface ImageProps {
 }
 
 const ContainerImage = ({ images }: ImageProps) => {
-  const [projectImages] = useState<string[]>([
-    ...images.desktop,
-    ...images.mobile,
-  ]);
+  const [projectImages] = useState<string[]>([...images.desktop]);
 
   const [featuredImage, setFeaturedImage] = useState(projectImages[0]);
 

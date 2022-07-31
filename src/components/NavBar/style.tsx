@@ -49,4 +49,17 @@ export const Header = styled.header`
     color: var(--white);
     border-bottom: 2px solid var(--white);
   }
+
+  @media (max-width: 425px) {
+    padding: 0 5%;
+    justify-content: center;
+
+    h1 {
+      white-space: nowrap;
+    }
+
+    nav {
+      display: none;
+    }
+  }
 `;

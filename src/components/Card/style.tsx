@@ -97,4 +97,31 @@ export const Contaier = styled.li`
     transition: 0.4s;
     user-select: none;
   }
+
+  @media (max-width: 768px) {
+    height: 20vh;
+
+    > span {
+      font-size: 2rem;
+    }
+
+    > p {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 425px) {
+    width: 45%;
+    height: 20vh;
+
+    > span {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      > p {
+        letter-spacing: 0;
+      }
+    }
+  }
 `;
