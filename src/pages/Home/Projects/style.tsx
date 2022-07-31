@@ -46,4 +46,16 @@ export const Container = styled.section`
     justify-content: space-between;
     gap: 5vh;
   }
+
+  @media (max-width: 768px) {
+    padding: 20vh 10% 30vh 10%;
+
+    > ul {
+      gap: 0;
+    }
+  }
+
+  @media (max-width: 425px) {
+    padding: 12vh 5%;
+  }
 `;

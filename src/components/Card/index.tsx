@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
 import Infos from "../../pages/Home/Projects/Infos";
+
 import { Contaier } from "./style";
 
 interface ProjectImages {
@@ -26,14 +28,6 @@ const Card = ({ projectData }: ProjectDataProps) => {
   const { name, image, active } = projectData;
 
   const [moreInfos, setMoreInfos] = useState(false);
-
-  useEffect(() => {
-    if (moreInfos) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [moreInfos]);
 
   return (
     <>

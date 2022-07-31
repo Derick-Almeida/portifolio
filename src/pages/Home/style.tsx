@@ -46,16 +46,58 @@ export const Container = styled.main`
           color: var(--purple-0);
         }
       }
+
       > p {
         color: var(--grey-2);
         font-weight: 400;
         font-size: 1rem;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 15px;
+
+        > a {
+          padding: 5px 10px;
+          border-radius: 10px;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
+        > a:nth-child(1) {
+          background: var(--purple-2);
+          color: var(--white);
+        }
+
+        > a:nth-child(2) {
+          background: var(--white);
+          color: var(--black);
+        }
       }
     }
 
     .parallax--thumb {
       background: url(${thumb}) no-repeat 98% 22% fixed;
       background-size: 40%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .home {
+      .content {
+        width: 100%;
+
+        padding: 0 10%;
+      }
+      .parallax--thumb {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    .home .content h2 {
+      font-size: 2rem;
     }
   }
 `;
