@@ -1,6 +1,10 @@
 import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
 
+import Contacts from "./Contacts";
+import Projects from "./Projects";
+import Skills from "./Skills";
+
 import { Container } from "./style";
 
 const Home = () => {
@@ -21,7 +25,10 @@ const Home = () => {
           </div>
           <div className="parallax--thumb"></div>
         </section>
-        <section id="projects"></section>
+
+        <Projects />
+        <Skills />
+        <Contacts />
       </Container>
       <Footer />
     </>

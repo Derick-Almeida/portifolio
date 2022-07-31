@@ -6,6 +6,7 @@ import bgSpace from "../../../src/assets/bg-space.svg";
 export const Container = styled.main`
   section {
     min-height: 92vh;
+    border-bottom: 2px solid var(--grey-2);
   }
 
   .home {
@@ -53,7 +54,8 @@ export const Container = styled.main`
     }
 
     .parallax--thumb {
-      background: url(${thumb}) no-repeat right fixed;
+      background: url(${thumb}) no-repeat 98% 22% fixed;
+      background-size: 40%;
     }
   }
 `;
