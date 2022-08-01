@@ -1,7 +1,12 @@
+import { doitImageDesktop } from "../assets/projects/doit";
 import {
   nukenzieImageDesktop,
   nukenzieImageMobile,
 } from "../assets/projects/nukenzie";
+import {
+  protifolioImageDesktop,
+  protifolioImageMobile,
+} from "../assets/projects/portifolio";
 
 const projects = [
   {
@@ -20,23 +25,27 @@ const projects = [
   },
   {
     id: 1,
-    name: "",
-    description: "",
-    image: { desktop: [], mobile: [] },
-    technologies: [],
-    githubCode: "",
-    application: "",
-    active: false,
+    name: "Do.it",
+    description:
+      "Do.it é uma aplicação que auxilia os usuários no dia a dia, através do gerenciamento de Tasks.",
+    image: { desktop: [...doitImageDesktop], mobile: [] },
+    technologies: ["HTML", "JavaScript"],
+    githubCode: "https://github.com/Derick-Almeida/do.it/tree/main",
+    application: "https://do-it-sooty.vercel.app",
+    active: true,
   },
   {
     id: 2,
-    name: "",
-    description: "",
-    image: { desktop: [], mobile: [] },
-    technologies: [],
-    githubCode: "",
-    application: "",
-    active: false,
+    name: "Portifolio",
+    description: "Meu portfólio pessoal, o site que você está agora",
+    image: {
+      desktop: [...protifolioImageDesktop],
+      mobile: [...protifolioImageMobile],
+    },
+    technologies: ["HTML", "TypeScript"],
+    githubCode: "https://github.com/Derick-Almeida/portifolio",
+    application: "https://portifolio-kappa-one.vercel.app/",
+    active: true,
   },
   {
     id: 3,
